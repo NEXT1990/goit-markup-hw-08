@@ -1,0 +1,23 @@
+@import "./utils/variables";
+@import "./base/reset";
+@import "./base/common";
+@import "./utils/hidden";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
+@import "./components/container";
+@import "./components/title";
+
+@import "./layouts/peculiarities";
+@import "./layouts/occupation";
+@import "./layouts/our-team";
+@import "./layouts/customers";
+@import "./layouts/footer";
+
+@import "./components/buttons";
+
+@import "./layouts/portfolio";
+@import "./layouts/backdrop";
+@import "./layouts/modal";
+@import "./layouts/header";
+@import "./layouts/hero";

@@ -1,0 +1,35 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+svg {
+  fill: currentColor;
+}
+
+ul {
+  margin: 0px;
+  padding-left: 0px;
+}
+
+address {
+  font-style: normal;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

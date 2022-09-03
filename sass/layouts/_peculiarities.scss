@@ -1,0 +1,31 @@
+.peculiarities {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    width: 270px;
+    text-align: left;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__title {
+    color: var(--title-text-color);
+    @include font(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+  }
+  &__paragraph {
+    @include font(400, 14px, 1.71, 0.03em);
+    margin-top: 10px;
+  }
+}
+
+.peculiarities__box {
+  background-color: var(--background-our-team-color);
+  height: 120px;
+  @extend %flex-center;
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  justify-content: center;
+}

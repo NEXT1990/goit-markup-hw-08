@@ -1,0 +1,15 @@
+.occupation {
+  padding-top: 0px;
+  &__title {
+    color: var(--title-text-color);
+    @include font(700, 36px, 1.17, 0.03em);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  &__img {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}

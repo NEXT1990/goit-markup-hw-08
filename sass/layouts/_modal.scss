@@ -1,0 +1,200 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--body-and-our-team-background-color);
+  pointer-events: auto;
+  padding: 40px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  &-title {
+    margin-bottom: 12px;
+    @include font(700, 20px, 1.15, 0.03em);
+    text-align: center;
+    color: var(--title-text-color);
+  }
+}
+
+.button-close {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  @extend %flex-center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  background-color: var(--address-collor);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  color: var(--logo-studio-in-header-collor);
+
+  @include transition(color, 250ms, var(--timing-function));
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    outline: none;
+  }
+}
+
+.user-name,
+.user-tel,
+.user-email,
+.text-comment {
+  @include font(400, 12px, 1.17, 0.01em);
+  color: inherit;
+}
+
+.form-input {
+  padding-left: 42px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  @include transition(
+    (border, background-color),
+    250ms,
+    var(--timing-function)
+  );
+
+  &:not(:focus):not(:placeholder-shown):valid {
+    background-color: rgba(0, 128, 0, 0.705);
+  }
+  &:not(:focus):not(:placeholder-shown):invalid {
+    background-color: rgba(255, 0, 0, 0.3);
+  }
+  &:not(:focus):not(:placeholder-shown):invalid ~ .error {
+    display: block;
+  }
+  &::placeholder {
+    font-family: "Roboto";
+    font-style: normal;
+    @include font(400, 14px, 1.14, 0.01em);
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:focus,
+  &:hover {
+    border: 1px solid var(--accent-color);
+    cursor: pointer;
+  }
+  &:focus + .icon-input,
+  &:hover + .icon-input {
+    fill: var(--accent-color);
+  }
+}
+
+.input-icon {
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  display: none;
+}
+
+.form-textarea {
+  padding: 12px 16px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 100px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+
+  @include transition(border, 250ms, var(--timing-function));
+  &::placeholder {
+    font-family: "Roboto";
+    font-style: normal;
+    @include font(400, 14px, 1.14, 0.01em);
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:focus,
+  &:hover {
+    border: 1px solid var(--accent-color);
+    cursor: pointer;
+  }
+}
+
+.icon-input {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: var(--title-text-color);
+
+  @include transition(fill, 250ms, var(--timing-function));
+}
+
+.check-text {
+  @extend %flex-center;
+  justify-content: center;
+
+  font-family: "Roboto";
+  font-style: normal;
+  @include font(400, 14px, 1.17, 0.03em);
+  color: var(--primary-text-color);
+  & span {
+    @extend %flex-center;
+    justify-content: center;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
+    margin-right: 7px;
+    @include transition(
+      (background-color, border-color),
+      250ms,
+      var(--timing-function)
+    );
+  }
+}
+
+.check-icon {
+  fill: transparent;
+  @include transition(fill, 250ms, var(--timing-function));
+}
+
+.input-check:checked + .check-text span {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.input-check:checked + .check-text .check-icon {
+  fill: var(--address-collor);
+}
+
+.input-check:focus + .check-text span {
+  border-color: var(--accent-color);
+}
+
+.input-check:hover + .check-text span {
+  border-color: var(--accent-color);
+}
+
+.policy-link {
+  margin-left: 8px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: #2196f3;
+}
+
+.modal-form .button.secondary {
+  padding: 10px 52px;
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

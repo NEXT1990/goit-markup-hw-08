@@ -1,0 +1,30 @@
+.section-title {
+  color: var(--title-text-color);
+  @include font(700, 36px, 1.17, 0.03em);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.customers-list {
+  display: flex;
+  gap: 30px;
+}
+
+.customers-link {
+  @extend %flex-center;
+  justify-content: center;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-soc-logo-company-color);
+  border-radius: 4px;
+  color: var(--icon-soc-logo-company-color);
+
+  @include transition((border, color), 250ms, var(--timing-function));
+
+  &:focus,
+  &:hover {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+  }
+}
