@@ -16,7 +16,20 @@
   }
   & .container {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 60px;
+    width: 100%;
+    @include tablet {
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    @include desktop {
+      flex-wrap: nowrap;
+      text-align: left;
+      gap: 0px;
+    }
   }
   & .link {
     @include transition(color, 250ms, var(--timing-function));
@@ -41,11 +54,31 @@
 }
 
 .footer-address li:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @include desktop {
+    margin-bottom: 9px;
+  }
+}
+
+.footer-box-one {
+  @include tablet {
+    margin-left: 51px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 0px;
+  }
 }
 
 .footer-box-two {
-  margin-left: 95px;
+  // margin-left: 95px; - 1200px
+  @media screen and (min-width: 768px) {
+    margin-right: 74px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 95px;
+    margin-right: 0px;
+  }
+
   & .social {
     margin-bottom: 0px;
     margin-top: 0px;
@@ -74,23 +107,35 @@
 }
 
 .footer-box-three {
-  margin-left: auto;
-}
-
-.foot-label {
-  display: block;
-  margin-bottom: 20px;
+  width: 100%;
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    width: auto;
+  }
 }
 
 .form-flex {
-  display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .foot-email {
   @include font(400, 16px, 1.25, 0.03em);
   color: var(--address-collor);
-  min-width: 358px;
-  margin-right: 12px;
+  min-width: 100%;
+  padding-left: 0px;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  @media screen and (min-width: 768px) {
+    min-width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+    margin-bottom: 0px;
+    min-width: 358px;
+  }
 
   line-height: 1.25;
   background-color: var(--footer-background-color);
@@ -117,7 +162,13 @@
 
 .form-flex .button.secondary {
   @extend %flex-center;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px 28px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
   &::after {
     content: "";

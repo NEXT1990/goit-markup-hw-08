@@ -11,15 +11,23 @@
 
 .section-team {
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  // align-items: flex-start;
+
   & .item {
     background-color: var(--body-and-our-team-background-color);
+    width: 100%;
     text-align: center;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    & + .item {
-      margin-left: 30px;
+
+    @include tablet {
+      width: calc((100% - 30px) / 2);
+    }
+    @include desktop {
+      width: calc((100% - 90px) / 4);
     }
   }
   & .title {

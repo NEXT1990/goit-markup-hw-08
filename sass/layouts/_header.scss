@@ -3,6 +3,9 @@
   color: var(--logo-studio-in-header-collor);
   font-family: "Raleway";
   @include font(700, 26px, 1.19, 0.03em);
+  @media screen and (max-width: 1200px) {
+    @include font(700, 24px, 1.17, 0.03em);
+  }
   transform: scale(1);
 
   @include transition((color, transform), 250ms, var(--timing-function));
