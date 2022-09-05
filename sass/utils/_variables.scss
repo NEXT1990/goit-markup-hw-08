@@ -18,6 +18,11 @@
   --shadow-footer-logo-collor: (0px 4px 4px rgba(0, 0, 0, 0.25));
   --icon-soc-logo-company-color: #afb1b8;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --bg-gradient: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );
 }
 
 $primary-text-color: #757575;
@@ -39,3 +44,8 @@ $hover-focus-button-secondary-collor: #188ce8;
 $shadow-footer-logo-collor: (0px 4px 4px rgba(0, 0, 0, 0.25));
 $icon-soc-logo-company-color: #afb1b8;
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$bg-gradient: linear-gradient(
+  to right,
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)
+);

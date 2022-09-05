@@ -21,7 +21,10 @@
 .button.secondary {
   color: var(--button-primary-color);
   background-color: var(--accent-color);
-  padding: 10px 26px 10px 25px;
+  padding: 10px 24px 10px 24px;
+  @include desktop {
+    padding: 10px 32px 10px 32px;
+  }
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;

@@ -1,29 +1,42 @@
 .hero {
   background-color: var(--hero-container-background-color);
-  max-width: 1600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  height: 400px;
+  background-image: var(--bg-gradient), url(../../images/teamwork-mob.jpg);
 
-  height: 600px;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/teamwork.jpg);
+  @include tablet {
+    background-image: var(--bg-gradient), url(../../images/teamwork-tab.jpg);
+  }
+
+  @include desktop {
+    height: 600px;
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: var(--bg-gradient), url(../../images/teamwork.jpg);
+  }
   background-position: center;
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   &__title {
-    max-width: 696px;
+    max-width: 290px;
     margin-left: auto;
     margin-right: auto;
     color: $hero-title-color;
-    @include font(900, 44px, 1.36, 0.06em);
     text-transform: uppercase;
     margin-bottom: 30px;
     text-align: center;
+    @include font(900, 26px, 1.62, 0.06em);
+    @include mobile {
+      max-width: 360px;
+    }
+    @include tablet {
+    }
+    @include desktop {
+      @include font(900, 44px, 1.36, 0.06em);
+      max-width: 696px;
+    }
   }
 }
