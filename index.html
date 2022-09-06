@@ -53,6 +53,31 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu__open-btn">
+          <svg class="" width="24" height="16">
+            <use href="./images/icons.svg#icon-nav-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="menu">
+        <button type="button" class="menu__close-btn">
+          <svg class="" width="19" height="19">
+            <use href="./images/"></use>
+          </svg>
+        </button>
+        <nav class="menu__nav">
+          <ul class="menu__list list">
+            <li class="menu__item">
+              <a href="./index.html" class="link">Студія</a>
+            </li>
+            <li class="menu__item">
+              <a href="./portfolio.html" class="link">Портфоліо</a>
+            </li>
+            <li class="menu__item">
+              <a href="./contacts.html" class="link">Контакти</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main>
@@ -124,21 +149,54 @@
           <h2 class="occupation__title">Чим ми займаємось</h2>
           <ul class="occupation__img list">
             <li class="occupation__item">
-              <img
-                src="./images/boxa.jpg"
-                alt="Приложения для ПК"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/boxa.webp 1x, ./images/boxa-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/boxa.jpg 1x, ./images/boxa-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img
+                  src="./images/boxa.jpg"
+                  alt="Приложения для ПК"
+                  width="370"
+                />
+              </picture>
             </li>
             <li class="occupation__item">
-              <img
-                src="./images/boxb.jpg"
-                alt="Мобильные приложения"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/boxb.webp 1x, ./images/boxb-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/boxb.jpg 1x, ./images/boxb-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img
+                  src="./images/boxb.jpg"
+                  alt="Мобильные приложения"
+                  width="370"
+                />
+              </picture>
             </li>
             <li class="occupation__item">
-              <img src="./images/boxc.jpg" alt="Дизайн" width="370" />
+              <picture>
+                <source
+                  srcset="./images/boxc.webp 1x, ./images/boxc-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/boxc.jpg 1x, ./images/boxc-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/boxc.jpg" alt="Дизайн" width="370" />
+              </picture>
             </li>
           </ul>
         </div>
@@ -149,11 +207,47 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="section-team list">
             <li class="item">
-              <img
-                src="./images/igor.jpg"
-                alt="Мужчина в черной рубашке"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/igor.webp 1x, ./images/igor-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/igor.jpg 1x, ./images/igor-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/igor-tab.webp    1x,
+                    ./images/igor-tab-2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/igor-tab.jpg 1x, ./images/igor-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/igor-mob.webp    1x,
+                    ./images/igor-mob-2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/igor-mob.jpg 1x, ./images/igor-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/igor-mob.jpg"
+                  alt="Мужчина в черной рубашке"
+                  width="450"
+                />
+              </picture>
+
               <div class="profession-title">
                 <h3 class="title">Ігор Дем'яненко</h3>
                 <p class="profession" lang="en">Product Designer</p>
@@ -190,11 +284,47 @@
               </div>
             </li>
             <li class="item">
-              <img
-                src="./images/olga.jpg"
-                alt="Женщина в темно-сером пиджаке"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/olga.webp 1x, ./images/olga-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/olga.jpg 1x, ./images/olga-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/olga-tab.webp    1x,
+                    ./images/olga-tab-2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/olga-tab.jpg 1x, ./images/olga-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/olga-mob.webp    1x,
+                    ./images/olga-mob-2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/olga-mob.jpg 1x, ./images/olga-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/olga-mob.jpg"
+                  alt="Женщина в темно-сером пиджаке"
+                  width="450"
+                />
+              </picture>
+
               <div class="profession-title">
                 <h3 class="title">Ольга Рєпіна</h3>
                 <p class="profession" lang="en">Frontend Developer</p>
@@ -231,11 +361,55 @@
               </div>
             </li>
             <li class="item">
-              <img
-                src="./images/nicholas.jpg"
-                alt="Мужчина в темно-серой рубашке"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/nicholas.webp    1x,
+                    ./images/nicholas-2x.webp 2x
+                  "
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/nicholas.jpg 1x, ./images/nicholas-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/nicholas-tab.webp    1x,
+                    ./images/nicholas-tab-2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/nicholas-tab.jpg    1x,
+                    ./images/nicholas-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/nicholas-mob.webp    1x,
+                    ./images/nicholas-mob-2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/nicholas-mob.jpg    1x,
+                    ./images/nicholas-mob-2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/nicholas-mob.jpg"
+                  alt="Мужчина в темно-серой рубашке"
+                  width="450"
+                />
+              </picture>
               <div class="profession-title">
                 <h3 class="title">Микола Тарасов</h3>
                 <p class="profession" lang="en">Marketing</p>
@@ -272,11 +446,53 @@
               </div>
             </li>
             <li class="item">
-              <img
-                src="./images/michael.jpg"
-                alt="Мужчина в черной футболке"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/michael.webp 1x, ./images/michael-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/michael.jpg 1x, ./images/michael-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/michael-tab.webp    1x,
+                    ./images/michael-tab-2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/michael-tab.jpg    1x,
+                    ./images/michael-tab-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/michael-mob.webp    1x,
+                    ./images/michael-mob-2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/michael-mob.jpg    1x,
+                    ./images/michael-mob-2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/michael-mob.jpg"
+                  alt="Мужчина в черной футболке"
+                  width="450"
+                />
+              </picture>
+
               <div class="profession-title">
                 <h3 class="title">Михайло Єрмаков</h3>
                 <p class="profession" lang="en">UI Designer</p>

@@ -92,7 +92,7 @@ body {
   margin: -1px;
 }
 
-.check-text span, .check-text, .button-close, .portfolio__filter, .form-flex .button.secondary, .customers-link, .social-link, .peculiarities__box, .header__nav {
+.check-text span, .check-text, .button-close, .portfolio__filter, .form-flex .button.secondary, .customers-link, .social-link, .peculiarities__box, .contact .link, .menu__nav, .men__open-btn {
   display: flex;
   align-items: center;
 }
@@ -176,6 +176,15 @@ body {
   background-color: var(--hover-focus-button-secondary-collor);
 }
 
+.header {
+  padding: 10px 0px;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0px 0px;
+  }
+}
+
 .header__logo,
 .footer-logo {
   color: var(--logo-studio-in-header-collor);
@@ -209,17 +218,34 @@ body {
   color: var(--accent-color);
 }
 
-.header__list {
+.men__open-btn {
+  justify-content: center;
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  padding: 0px 0px;
+  border: none;
+  border-radius: 0;
+  background-color: var(--button-primary-color);
+}
+@media screen and (min-width: 768px) {
+  .men__open-btn {
+    display: none;
+  }
+}
+
+.menu__list {
+  position: absolute;
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .header__list {
+  .menu__list {
     display: flex;
     margin-left: 93px;
   }
 }
 
-.header__list .link {
+.menu__list .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -233,8 +259,8 @@ body {
   transition-timing-function: var(--timing-function);
 }
 
-.header__list .link:hover,
-.header__list .link:focus {
+.menu__list .link:hover,
+.menu__list .link:focus {
   color: var(--accent-color);
 }
 
@@ -243,15 +269,17 @@ body {
   position: relative;
 }
 
-.current::after {
-  content: "";
-  position: absolute;
-  background-color: var(--accent-color);
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
+@media screen and (min-width: 768px) {
+  .current::after {
+    content: "";
+    position: absolute;
+    background-color: var(--accent-color);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+  }
 }
 
 .header__item:not(:last-child) {
@@ -260,6 +288,19 @@ body {
 
 .contact {
   display: none;
+  margin-left: auto;
+}
+.contact .link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+.contact .link:hover, .contact .link:focus {
+  color: var(--accent-color);
 }
 
 .contact__item:not(:last-child) {
@@ -280,24 +321,38 @@ body {
   background-color: var(--hero-container-background-color);
   padding-top: 118px;
   padding-bottom: 118px;
-  height: 400px;
-  background-image: var(--bg-gradient), url(../../images/teamwork-mob.jpg);
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  background-image: var(--bg-gradient), url(../../images/teamwork-mob.jpg);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--bg-gradient), url(../../images/teamwork-mob-2x.jpg);
+  }
 }
 @media screen and (min-width: 768px) {
   .hero {
     background-image: var(--bg-gradient), url(../../images/teamwork-tab.jpg);
   }
 }
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--bg-gradient), url(../../images/teamwork-tab-2x.jpg);
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero {
-    height: 600px;
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: var(--bg-gradient), url(../../images/teamwork.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--bg-gradient), url(../../images/teamwork-2x.jpg);
   }
 }
 .hero__title {

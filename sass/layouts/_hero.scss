@@ -2,24 +2,32 @@
   background-color: var(--hero-container-background-color);
   padding-top: 118px;
   padding-bottom: 118px;
-  height: 400px;
-  background-image: var(--bg-gradient), url(../../images/teamwork-mob.jpg);
-
-  @include tablet {
-    background-image: var(--bg-gradient), url(../../images/teamwork-tab.jpg);
-  }
-
-  @include desktop {
-    height: 600px;
-    max-width: 1600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-image: var(--bg-gradient), url(../../images/teamwork.jpg);
-  }
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  background-image: var(--bg-gradient), url(../../images/teamwork-mob.jpg);
+  @include retina {
+    background-image: var(--bg-gradient), url(../../images/teamwork-mob-2x.jpg);
+  }
+  @include tablet {
+    background-image: var(--bg-gradient), url(../../images/teamwork-tab.jpg);
+    @include retina {
+      background-image: var(--bg-gradient),
+        url(../../images/teamwork-tab-2x.jpg);
+    }
+  }
+
+  @include desktop {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: var(--bg-gradient), url(../../images/teamwork.jpg);
+    @include retina {
+      background-image: var(--bg-gradient), url(../../images/teamwork-2x.jpg);
+    }
+  }
+
   &__title {
     max-width: 290px;
     margin-left: auto;
