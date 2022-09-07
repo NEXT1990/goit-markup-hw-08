@@ -1,18 +1,8 @@
-.header {
-  padding: 10px 0px;
-  @include tablet {
-    padding: 0px 0px;
-  }
-}
-
 .header__logo,
 .footer-logo {
   color: var(--logo-studio-in-header-collor);
   font-family: "Raleway";
   @include font(700, 26px, 1.19, 0.03em);
-  @media screen and (max-width: 1200px) {
-    @include font(700, 24px, 1.17, 0.03em);
-  }
   transform: scale(1);
 
   @include transition((color, transform), 250ms, var(--timing-function));
@@ -27,48 +17,17 @@
   color: var(--accent-color);
 }
 
-.men__open-btn {
-  @extend %flex-center;
-  justify-content: center;
-  margin-left: auto;
-  width: 40px;
-  height: 40px;
-  padding: 0px 0px;
-  border: none;
-  border-radius: 0;
-  background-color: var(--button-primary-color);
-  @include tablet {
-    display: none;
-  }
-}
-
-.menu__nav {
+.header__nav {
   @extend %flex-center;
 }
 
-// .header__nav {
-//   @extend %flex-center;
-// }
-
-.menu__list {
-  position: absolute;
+.header__list {
   display: none;
-  @include tablet {
-    display: flex;
-    margin-left: 93px;
-  }
+  // display: flex;
+  margin-left: 93px;
 }
 
-// .header__list {
-//   position: absolute;
-//   display: none;
-//   @include tablet {
-//     display: flex;
-//     margin-left: 93px;
-//   }
-// }
-
-.menu__list .link {
+.header__list .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -82,29 +41,10 @@
   @include transition(color, 250ms, var(--timing-function));
 }
 
-// .header__list .link {
-//   display: block;
-//   padding-top: 32px;
-//   padding-bottom: 32px;
-
-//   color: var(--title-text-color);
-//   font-weight: 500;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   text-decoration: none;
-
-//   @include transition(color, 250ms, var(--timing-function));
-// }
-
-.menu__list .link:hover,
-.menu__list .link:focus {
+.header__list .link:hover,
+.header__list .link:focus {
   color: var(--accent-color);
 }
-
-// .header__list .link:hover,
-// .header__list .link:focus {
-//   color: var(--accent-color);
-// }
 
 .link.current {
   color: var(--accent-color);
@@ -129,7 +69,6 @@
 
 .contact {
   display: none;
-
   // display: flex;
   margin-left: auto;
   & .link {
@@ -158,4 +97,73 @@
 .contact__mail {
   fill: currentColor;
   margin-right: 10px;
+}
+
+.menu {
+  position: fixed;
+  background-color: var(--body-and-our-team-background-color);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10px;
+  padding-bottom: 48px;
+  padding-left: 25px;
+}
+
+.menu-open {
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+  @extend %flex-center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  background-color: var(--address-collor);
+  border: none;
+}
+
+.menu__close {
+  @extend %flex-center;
+  justify-content: center;
+  margin-left: auto;
+
+  width: 40px;
+  height: 40px;
+  background-color: var(--address-collor);
+  border: none;
+
+  @include transition(color, 250ms, var(--timing-function));
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu__link {
+  @include font(500, 40px, 1.17, 0.02em);
+  color: var(--title-text-color);
+}
+
+.contact__tell {
+  @include font(500, 34px, 1.18, 0.02em);
+  color: #2196f3;
+  margin-bottom: 32px;
+}
+
+.contact__mail {
+  @include font(500, 24px, 1.17, 0.02em);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: #757575;
 }
