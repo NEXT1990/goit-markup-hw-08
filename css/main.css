@@ -92,7 +92,7 @@ body {
   margin: -1px;
 }
 
-.check-text span, .check-text, .button-close, .portfolio__filter, .form-flex .button.secondary, .customers-link, .social-link, .peculiarities__box, .menu__close, .menu-open, .contact .link, .header__nav {
+.check-text span, .check-text, .button-close, .portfolio__filter, .form-flex .button.secondary, .customers-link, .social-link, .peculiarities__box, .menu__close, .menu-open, .header__nav {
   display: flex;
   align-items: center;
 }
@@ -202,7 +202,12 @@ body {
 
 .header__list {
   display: none;
-  margin-left: 93px;
+}
+@media screen and (min-width: 768px) {
+  .header__list {
+    display: flex;
+    margin-left: 88px;
+  }
 }
 
 .header__list .link {
@@ -229,52 +234,88 @@ body {
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
-  .current::after {
-    content: "";
-    position: absolute;
-    background-color: var(--accent-color);
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-  }
+.current::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-color);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
 }
 
-.header__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .header__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .contact {
   display: none;
-  margin-left: auto;
 }
-.contact .link {
-  color: var(--primary-text-color);
-  font-weight: 500;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+@media screen and (min-width: 768px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+  .contact .link {
+    color: var(--primary-text-color);
+    font-weight: 500;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
+  }
+  .contact .link:hover, .contact .link:focus {
+    color: var(--accent-color);
+  }
 }
-.contact .link:hover, .contact .link:focus {
-  color: var(--accent-color);
+@media screen and (min-width: 1200px) {
+  .contact {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
 }
 
-.contact__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .contact__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact__email,
+.contact__telephone {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__email,
+.contact__telephone {
+    margin-right: 10px;
+  }
 }
 
 .header {
   border-bottom: 1px solid var(--border-header-collor);
-}
-
-.contact__tell,
-.contact__mail {
-  fill: currentColor;
-  margin-right: 10px;
 }
 
 .menu {
@@ -288,6 +329,12 @@ body {
   padding-top: 10px;
   padding-bottom: 48px;
   padding-left: 25px;
+}
+.menu .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .menu-open {
@@ -337,6 +384,10 @@ body {
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: #2196f3;
+}
+
+.contact__tell.link {
+  display: block;
   margin-bottom: 32px;
 }
 
@@ -350,6 +401,28 @@ body {
   line-height: 28px;
   letter-spacing: 0.02em;
   color: #757575;
+}
+
+.menu__soc {
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}
+
+.soc__item {
+  margin-top: 64px;
+}
+
+.soc__item .link {
+  color: var(--accent-color);
+}
+
+.soc__item:not(:last-child) {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .hero {
