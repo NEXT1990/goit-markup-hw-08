@@ -3,8 +3,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
+  width: 100vw;
+  height: 100vh;
   background-color: var(--body-and-our-team-background-color);
   pointer-events: auto;
   padding: 40px;
@@ -12,9 +12,20 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  @include mobile {
+    max-width: 450px;
+    height: 609px;
+  }
+  @include desktop {
+    max-width: 528px;
+    height: 581px;
+  }
   &-title {
     margin-bottom: 12px;
-    @include font(700, 20px, 1.15, 0.03em);
+    @include font(700, 20px, 1.5, 0.03em);
+    @include desktop {
+      @include font(700, 20px, 1.15, 0.03em);
+    }
     text-align: center;
     color: var(--title-text-color);
   }
@@ -48,7 +59,10 @@
 .user-tel,
 .user-email,
 .text-comment {
-  @include font(400, 12px, 1.17, 0.01em);
+  @include font(400, 14px, 1.17, 0.01em);
+  @include desktop {
+    @include font(400, 12px, 1.17, 0.01em);
+  }
   color: inherit;
 }
 
@@ -144,7 +158,7 @@
 
   font-family: "Roboto";
   font-style: normal;
-  @include font(400, 14px, 1.17, 0.03em);
+  @include font(400, 12px, 1.17, 0.03em);
   color: var(--primary-text-color);
   & span {
     @extend %flex-center;
@@ -159,6 +173,9 @@
       250ms,
       var(--timing-function)
     );
+  }
+  @include desktop {
+    @include font(400, 14px, 1.71, 0.03em);
   }
 }
 

@@ -27,10 +27,10 @@
           >
           <ul class="header__list list">
             <li class="header__item">
-              <a href="./index.html" class="link current">Студія</a>
+              <a href="./index.html" class="link">Студія</a>
             </li>
             <li class="header__item">
-              <a href="./portfolio.html" class="link">Портфоліо</a>
+              <a href="./portfolio.html" class="link current">Портфоліо</a>
             </li>
             <li class="header__item">
               <a href="./contacts.html" class="link">Контакти</a>
@@ -57,7 +57,7 @@
           <svg class="" width="24" height="16">
           <use href="./images/icons.svg#icon-nav-menu"></use></button>
       </div>
-      <div class="menu visually-hidden" data-menu>
+      <div class="menu is-hidden" data-menu>
         <div class="container">
           <div class="mob-menu_top">
         <button type="button" class="menu__close" data-menu-close>
@@ -66,8 +66,8 @@
         </button>
         <nav>
           <ul class="menu__list list">
-            <li class="menu__item"><a href="./index.html" class="menu__link link current">Студія</a></li>
-            <li class="menu__item"><a href="./portfolio.html" class="menu__link link">Портфоліо</a></li>
+            <li class="menu__item"><a href="./index.html" class="menu__link link">Студія</a></li>
+            <li class="menu__item"><a href="./portfolio.html" class="menu__link link current">Портфоліо</a></li>
             <li class="menu__item"><a href="./contacts.html" class="menu__link link">Контакти</a></li>
           </ul>
         </nav>
@@ -116,11 +116,47 @@
             <li class="portfolio-item item">
               <a class="portfolio-link link" href="./portfolio.html">
                 <div class="text-hover">
-                  <img
-                    src="./images/weba.jpg"
+                  <picture>
+                <source
+                  srcset="./images/weba.webp 1x, ./images/weba-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/weba.jpg 1x, ./images/weba-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/weba-tab.webp    1x,
+                    ./images/weba-tab-2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/weba-tab.jpg 1x, ./images/weba-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/weba-mob.webp    1x,
+                    ./images/weba-mob-2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/weba-mob.jpg 1x, ./images/weba-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                    src="./images/weba-mob.jpg"
                     alt="приклад вебсайта"
-                    width="370"
+                    width="450"
                   />
+              </picture>
+                  
                   <p class="position-text"
                     >Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -137,11 +173,47 @@
             <li class="portfolio-item item">
               <a class="portfolio-link link" href="./portfolio.html">
                 <div class="text-hover">
-                  <img
-                    src="./images/designa.jpg"
+                  <picture>
+                <source
+                  srcset="./images/designa.webp 1x, ./images/designa-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/designa.jpg 1x, ./images/designa-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/designa-tab.webp    1x,
+                    ./images/designa-tab-2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/designa-tab.jpg 1x, ./images/designa-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/designa-mob.webp    1x,
+                    ./images/designa-mob-2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/designa-mob.jpg 1x, ./images/designa-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                    src="./images/designa-mob.jpg"
                     alt="приклад дизайна"
-                    width="370"
+                    width="450"
                   />
+              </picture>
+                  
                   <p class="position-text"
                     >Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -159,11 +231,47 @@
             <li class="portfolio-item item">
               <a class="portfolio-link link" href="./portfolio.html">
                 <div class="text-hover">
-                  <img
-                    src="./images/applicationa.jpg"
+                  <picture>
+                <source
+                  srcset="./images/applicationa.webp 1x, ./images/applicationa-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/applicationa.jpg 1x, ./images/applicationa-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/applicationa-tab.webp    1x,
+                    ./images/applicationa-tab-2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/applicationa-tab.jpg 1x, ./images/applicationa-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/applicationa-mob.webp    1x,
+                    ./images/applicationa-mob-2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/applicationa-mob.jpg 1x, ./images/applicationa-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                    src="./images/applicationa-mob.jpg"
                     alt="приклад додатку"
-                    width="370"
+                    width="450"
                   />
+              </picture>
+                  
                   <p class="position-text"
                     >Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -181,11 +289,47 @@
             <li class="portfolio-item item">
               <a class="portfolio-link link" href="./portfolio.html">
                 <div class="text-hover">
-                  <img
-                    src="./images/marketinga.jpg"
+                  <picture>
+                <source
+                  srcset="./images/marketinga.webp 1x, ./images/marketinga-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/marketinga.jpg 1x, ./images/marketinga-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/marketinga-tab.webp    1x,
+                    ./images/marketinga-tab-2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/marketinga-tab.jpg 1x, ./images/marketinga-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/marketinga-mob.webp    1x,
+                    ./images/marketinga-mob-2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/marketinga-mob.jpg 1x, ./images/marketinga-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                    src="./images/marketinga-mob.jpg"
                     alt="приклад маркетинга"
-                    width="370"
+                    width="350"
                   />
+              </picture>
+                  
                   <p class="position-text"
                     >Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -203,11 +347,47 @@
             <li class="portfolio-item item">
               <a class="portfolio-link link" href="./portfolio.html">
                 <div class="text-hover">
-                  <img
-                    src="./images/applicationb.jpg"
+                  <picture>
+                <source
+                  srcset="./images/applicationb.webp 1x, ./images/applicationb-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/applicationb.jpg 1x, ./images/applicationb-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/applicationb-tab.webp    1x,
+                    ./images/applicationb-tab-2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/applicationb-tab.jpg 1x, ./images/applicationb-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/applicationb-mob.webp    1x,
+                    ./images/applicationb-mob-2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/applicationb-mob.jpg 1x, ./images/applicationb-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                    src="./images/applicationb-mob.jpg"
                     alt="приклад додатку"
-                    width="370"
+                    width="450"
                   />
+              </picture>
+                  
                   <p class="position-text"
                     >Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -225,11 +405,47 @@
             <li class="portfolio-item item">
               <a class="portfolio-link link" href="./portfolio.html">
                 <div class="text-hover">
-                  <img
-                    src="./images/webb.jpg"
+                  <picture>
+                <source
+                  srcset="./images/webb.webp 1x, ./images/webb-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/webb.jpg 1x, ./images/webb-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/webb-tab.webp    1x,
+                    ./images/webb-tab-2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/webb-tab.jpg 1x, ./images/webb-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/webb-mob.webp    1x,
+                    ./images/webb-mob-2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/webb-mob.jpg 1x, ./images/webb-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                    src="./images/webb-mob.jpg"
                     alt="приклад вебсайта"
-                    width="370"
+                    width="450"
                   />
+              </picture>
+                  
                   <p class="position-text"
                     >Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -247,11 +463,47 @@
             <li class="portfolio-item item">
               <a class="portfolio-link link" href="./portfolio.html">
                 <div class="text-hover">
-                  <img
-                    src="./images/designb.jpg"
+                  <picture>
+                <source
+                  srcset="./images/designb.webp 1x, ./images/designb-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/designb.jpg 1x, ./images/designb-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/designb-tab.webp    1x,
+                    ./images/designb-tab-2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/designb-tab.jpg 1x, ./images/designb-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/designb-mob.webp    1x,
+                    ./images/designb-mob-2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/designb-mob.jpg 1x, ./images/designb-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                    src="./images/designb-mob.jpg"
                     alt="приклад дизайна"
-                    width="370"
+                    width="450"
                   />
+              </picture>
+                  
                   <p class="position-text"
                     >Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -269,11 +521,47 @@
             <li class="portfolio-item item">
               <a class="portfolio-link link" href="./portfolio.html">
                 <div class="text-hover">
-                  <img
+                  <picture>
+                <source
+                  srcset="./images/marketingb.webp 1x, ./images/marketingb-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/marketingb.jpg 1x, ./images/marketingb-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/marketingb-tab.webp    1x,
+                    ./images/marketingb-tab-2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/marketingb-tab.jpg 1x, ./images/marketingb-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/marketingb-mob.webp    1x,
+                    ./images/marketingb-mob-2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/marketingb-mob.jpg 1x, ./images/marketingb-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
                     src="./images/marketingb.jpg"
                     alt="приклад маркетинга"
-                    width="370"
+                    width="450"
                   />
+              </picture>
+                  
                   <p class="position-text"
                     >Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -291,11 +579,47 @@
             <li class="portfolio-item item">
               <a class="portfolio-link link" href="./portfolio.html">
                 <div class="text-hover">
-                  <img
-                    src="./images/applicationc.jpg"
+                  <picture>
+                <source
+                  srcset="./images/applicationc.webp 1x, ./images/applicationc-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/applicationc.jpg 1x, ./images/applicationc-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/applicationc-tab.webp    1x,
+                    ./images/applicationc-tab-2x.webp 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/applicationc-tab.jpg 1x, ./images/applicationc-tab-2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/applicationc-mob.webp    1x,
+                    ./images/applicationc-mob-2x.webp 2x
+                  "
+                  media="(max-width:767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/applicationc-mob.jpg 1x, ./images/applicationc-mob-2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                    src="./images/applicationc-mob.jpg"
                     alt="приклад додатку"
-                    width="370"
+                    width="450"
                   />
+              </picture>
+                  
                   <p class="position-text"
                     >Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -399,6 +723,6 @@
         </div>
       </div>
     </footer>
-    <script src="./menu.js"></script>
+    <script src="./mobile-menu.js"></script>
   </body>
 </html>

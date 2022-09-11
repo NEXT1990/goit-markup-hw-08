@@ -137,10 +137,11 @@
     flex-direction: column;
     justify-content: space-between;
   }
+  @include transition((opacity, visibility), 250ms, var(--timing-function));
 }
 
 .menu-open {
-  @media screen and (min-width: 767px) {
+  @include tablet {
     display: none;
   }
   @extend %flex-center;
