@@ -1,9 +1,10 @@
 .occupation {
   display: none;
   @include desktop {
-    display: contents;
+    display: block;
+    padding-top: 0px;
   }
-  padding-top: 0px;
+
   &__title {
     color: var(--title-text-color);
     @include font(700, 36px, 1.17, 0.03em);

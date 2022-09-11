@@ -22,9 +22,9 @@
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: var(--bg-gradient), url(../../images/teamwork.jpg);
+    background-image: var(--bg-gradient), url(../images/teamwork.jpg);
     @include retina {
-      background-image: var(--bg-gradient), url(../../images/teamwork-2x.jpg);
+      background-image: var(--bg-gradient), url(../images/teamwork-2x.jpg);
     }
   }
 
